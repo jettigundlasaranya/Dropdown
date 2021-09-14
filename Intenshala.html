@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/30ecc0edf3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(245, 240, 240);
+        }
+
+        header {
+            background: white;
+            overflow: auto;
+        }
+
+        #head {
+            width: 80%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        #head h3 {
+            display: inline-block;
+            margin-top: 18px;
+            color: blue;
+        }
+
+        #search input {
+            float: left;
+            width: 50%;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        select {
+            margin-top: 3px;
+            border-top: none;
+            border-left: none;
+            border-bottom: none;
+            margin-left: 7px;
+            height: 28px;
+        }
+
+        #search1 {
+            border: 1px solid;
+            width: 448px;
+            height: 35px;
+        }
+
+        #head h3 {
+            display: inline-block;
+        }
+
+        #search {
+            width: 60%;
+            float: right;
+            margin-top: 20px;
+        }
+
+        #search input {
+            float: left;
+            width: 50%;
+            height: 33px;
+        }
+
+        #search i {
+            margin-left: 89px;
+        }
+
+        #bdiv {
+            float: right;
+            margin-top: -34px;
+        }
+
+        #bdiv button:first-child {
+            margin-right: 25px;
+        }
+
+        nav {
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        nav ul {
+            margin: 0 auto;
+            width: 53%;
+            height: 49px;
+            padding: 11px;
+        }
+
+        nav li {
+            float: left;
+            list-style: none;
+            margin: 0px 8px 2px 27px;
+        }
+
+        section {
+            width: 80%;
+            margin: 0 auto;
+            height: 1496px;
+            overflow: auto;
+            background-color: white;
+        }
+
+        article {
+            /* border: 2px solid red; */
+            width: 25%;
+            float: left;
+            margin-top: 8px;
+            height: 1387px;
+        }
+
+        #articlediv {
+            margin-left: 25px;
+        }
+
+        #img1 {
+            width: 100%;
+            height: 120px;
+        }
+
+        #img2 {
+            width: 43px;
+            height: 38px;
+        }
+
+        #locationi {
+            width: 99%;
+            height: 200px;
+        }
+
+        aside {
+            width: 70%;
+            /* border: 2px solid red; */
+            float: right;
+            margin-top: 8px;
+            height: 1387px;
+        }
+
+        #asidediv {
+            margin-right: 20px;
+        }
+
+        #sharediv {
+            margin-top: 20px;
+            float: right;
+        }
+
+        #sharediv i {
+            padding: 0px 37px 0px 0px;
+        }
+
+        #asidediv #uldiv {
+            margin-top: 45px;
+            overflow: auto;
+            padding-left: 0px;
+            width: 100%;
+            border-bottom: 2px solid gray;
+        }
+
+        #asidediv #uldiv li {
+            margin: 0px 40px 0px 0px;
+            float: left;
+            list-style: none;
+        }
+
+        #asidediv #uldiv li:last-child {
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            text-decoration-thickness: 2px;
+        }
+
+        #img3 {
+            width: 30%;
+            margin-left: 10px;
+            float: left;
+        }
+
+        .container {
+            position: relative;
+            opacity: 0.3;
+        }
+
+        .textcontainer {
+            position: absolute;
+            top: 84px;
+            left: 117px;
+        }
+
+        #active {
+            background-color: rgb(52, 52, 233);
+            border-radius: 5px;
+        }
+
+        #asidediv #ul1div {
+            overflow: auto;
+            padding-left: 0px;
+        }
+
+        #asidediv #ul1div li {
+            list-style: none;
+            float: left;
+            background-color: rgb(236, 232, 232);
+            margin: 9px 12px 4px 9px;
+            border-radius: 10px;
+        }
+
+        #img4 {
+            width: 100px;
+        }
+
+        figcaption {
+            float: right;
+            margin-right: 215px;
+        }
+
+        #review1main {
+            box-shadow: 0px 0px 1px 1px slategrey;
+            border-radius: 3px;
+            padding: 5px;
+            height: 192px;
+            margin: 46px;
+        }
+
+        #footer {
+            float: right;
+            margin-right: 276px;
+            margin-top: 10px;
+        }
+
+        #footer1 {
+            margin-top: 55px;
+            float: right;
+            margin-right: -328px;
+            background: rgb(10, 10, 248);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">
+        <header>
+            <div id="head">
+                <h3>VendoSmart</h3>
+                <div id="search">
+                    <div id="search1">
+                        <input type="text" placeholder="Category or Cmpany or Brand" name="" id="">
+                        <select>
+                            <option value="">Capabilities</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div id="bdiv">
+                        <button type="button" class="btn btn-primary">login</button>
+                        <button type="button" class="btn btn-primary">signup</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li id="li1">Find Manufacturers</li>
+                <li id="li1">About Us</li>
+                <li id="li1">List Your Business</li>
+                <li id="li1">Bookmarks</li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <div id="articlediv">
+                    <img id="img1"
+                        src="data:image/png;base64,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">
+                    <h3>Align Metal & plastic Products (HK) co Limited</h3>
+                    <br>
+                    <p>Building A, No.224, Guangtian Road, Tangxia Chung, Baoan District, Shenzhen, China, Shenzhen,
+                        (Guangdong),51800D, China</p>
+                    <br>
+                    <div id="stars">
+                        <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                        <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                        <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                        <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                        <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                    </div>
+                    <strong>Rated 4.9</strong> (556 Reviews)
+                    <br>
+                    <h3>Achievements</h3>
+                    <div id="imgdiv">
+                        <img id="img2"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqu_qnzxI4ZYPBaLLN9o3cvG4nwyestKMXeA&usqp=CAU"
+                            alt="">
+                        <img id="img2"
+                            src="https://insidesmallbusiness.com.au/wp-content/uploads/2021/04/bigstock-The-Red-Figure-Of-A-Man-Stands-297004354.jpg"
+                            alt="">
+                        <img id="img2" src="https://camdenhc.com/wp-content/uploads/sites/69/2018/05/achievement.jpg"
+                            alt="">
+                        <img id="img2"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgtA9XAfFy5KMv_Mkh_jDaZuDvFf7ylvivsw&usqp=CAU"
+                            alt="">
+                    </div>
+                    <br>
+                    <h3>Location</h3>
+                    <iframe id="locationi"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31072.210939781093!2d79.10114245!3d13.223661199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e1!4m0!4m0!5e0!3m2!1sen!2sin!4v1631609508604!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <br> <br>
+                    <p>Building A,No.224,Guangtion Road, Tangxia Chung, Baoan District, Shenhen, China, Shenzhen,
+                        518000, China</p>
+                    <br>
+                    <h3>Key People Involved</h3>
+                    <ul>
+                        <li>Karen (Human Resource)</li>
+                        <li>Karen (Shipping)</li>
+                        <li>Karen (Accounting)</li>
+                        <li>Karen (Formulation Chemist)</li>
+                        <li>Karen (Quality Control)</li>
+                    </ul>
+                    <br>
+                    <h3>Phone</h3>
+                    <p>+91-99544-45421</p>
+                    <br>
+                    <h3>Website</h3>
+                    <a href="">http://aaranalpha.com</a>
+                </div>
+            </article>
+            <aside>
+                <div id="asidediv">
+                    <h3>About</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut corporis nesciunt ea laborum,
+                        ab temporibus delectus nihil fuga quia fugiat, animi sunt deserunt soluta qui vero dolorum
+                        officia cupiditate.</p>
+                    <a href="#">Read More</a>
+                    <div id="sharediv">
+                        <i class="fas fa-share-alt-square fa-2x" style="color:blue;"></i>
+                        <i class="fas fa-bookmark fa-2x">Save For Later</i>
+                        <button class="btn btn-primary" style="border-radius: 5px;">Send Message</button>
+                    </div>
+                    <ul id="uldiv">
+                        <li>Capability</li>
+                        <li>Equipment</li>
+                        <li>Machine</li>
+                        <li>Certificates</li>
+                    </ul> <br>
+                    <div id="asideimg">
+                        <div class="container">
+                            <img id="img3"
+                                src="https://image.shutterstock.com/image-vector/certificate-template-diploma-modern-design-260nw-1310317375.jpg"
+                                alt="">
+                            <div class="textcontainer">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                        <img id="img3"
+                            src="https://image.shutterstock.com/image-vector/certificate-template-diploma-modern-design-260nw-1310317375.jpg"
+                            alt="">
+                        <img id="img3"
+                            src="https://image.shutterstock.com/image-vector/certificate-template-diploma-modern-design-260nw-1310317375.jpg"
+                            alt="">
+                    </div>
+                    <h3>Services</h3>
+                    <ul id="ul1div">
+                        <li id="active">3d Printing</li>
+                        <li>Direct metal Laser</li>
+                        <li>3d Printing</li>
+                        <li>Direct Metal Laser</li>
+                        <li>Direct Metal Laser</li>
+                        <li>3d Printing</li>
+                        <li>3d Printing</li>
+                        <li>Direct Metal Loser</li>
+                        <li>3d Printing</li>
+                        <li>3d Printing</li>
+                        <li>3d Printing</li>
+                        <li>Direct Metal Loser</li>
+                        <li>Direct Metal Loser</li>
+                        <li>3d Printing</li>
+                        <li>3d Printing</li>
+                        <li>Direct Metal Loser</li>
+                        <li>3d Printing</li>
+                    </ul>
+                    <h3>Reviews</h3>
+                    <div id="review1main">
+                        <figure>
+                            <img id="img4"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7cuMJk4cJVq7-VDjoB0cNbBhUvx_CyyudGA&usqp=CAU"
+                                alt="">
+                            <figcaption>
+                                <h3>Highly Recommended</h3>
+                                <p>John Doe, The Best Company, 1 June,2021</p>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                            </figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi vero esse accusamus
+                            repellat, nihil ad natus eaque enim, reiciendis error rem saepe ut necessitatibus sint
+                            totam, tempore magnam eius.</p>
+                    </div>
+                    <div id="review1main">
+                        <figure>
+                            <img id="img4"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7cuMJk4cJVq7-VDjoB0cNbBhUvx_CyyudGA&usqp=CAU"
+                                alt="">
+                            <figcaption>
+                                <h3>Highly Recommended</h3>
+                                <p>John Doe, The Best Company, 1 June,2021</p>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                            </figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi vero esse accusamus
+                            repellat, nihil ad natus eaque enim, reiciendis error rem saepe ut necessitatibus sint
+                            totam, tempore magnam eius.</p>
+                    </div>
+                    <div id="review1main">
+                        <figure>
+                            <img id="img4"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7cuMJk4cJVq7-VDjoB0cNbBhUvx_CyyudGA&usqp=CAU"
+                                alt="">
+                            <figcaption>
+                                <h3>Highly Recommended</h3>
+                                <p>John Doe, The Best Company, 1 June,2021</p>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                                <i class="fas fa-star fa-2x" style=" background-color:green; color:white "></i>
+                            </figcaption>
+                        </figure>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam modi vero esse accusamus
+                            repellat, nihil ad natus eaque enim, reiciendis error rem saepe ut necessitatibus sint
+                            totam, tempore magnam eius.</p>
+                    </div>
+                </div>
+            </aside>
+            <a id="footer" href="#">Read All Reviews</a>
+            <br>
+            <button id="footer1">Send RFQ</button>
+        </section>
+    </div>
+</body>
+
+</html>
